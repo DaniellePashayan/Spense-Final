@@ -68,6 +68,7 @@ h1 {
 .navbar__menu img {
     height:1.1em;
 }
+
 main {
     display:flex;
     flex-wrap:wrap;
@@ -105,7 +106,19 @@ main {
 }
 
 .main__image img {
-    max-width:100%;
+    width:100%;
+}
+
+.main__image__phone {
+    display:block;
+}
+
+.main__image__tablet{
+    display:block;
+}
+
+.main__image__desktop {
+    display:block;
 }
 
 .main__aboutus__inputs {
@@ -245,3 +258,35 @@ main {
     padding-left:4px;
 }
 
+/* Small devices, landscape */
+@media only screen and (min-width:576) {
+    .main__image__tablet {
+        display:none;
+    }
+
+    .main__image__desktop {
+        display:none;
+    }
+}
+
+/* Mediam devices ie tablets */
+@media only screen and (min-width:768) {
+    .main__image__phone {
+        display:none;
+    }
+
+    .main__image__desktop {
+        display:none;
+    }
+}
+
+/* Large devices ie desktop */
+@media only screen and (min-width:992) {
+    .main__image__phone {
+        display:none;
+    }
+
+    .main__image__tablet {
+        display:none;
+    }
+}
