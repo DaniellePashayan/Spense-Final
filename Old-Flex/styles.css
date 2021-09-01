@@ -109,16 +109,16 @@ main {
     width:100%;
 }
 
-.main__image__phone {
+.main__image > .small {
     display:block;
 }
 
-.main__image__tablet{
-    display:block;
+.main__image > .medium {
+    display:none;
 }
 
-.main__image__desktop {
-    display:block;
+.main__image > .large {
+    display:none;
 }
 
 .main__aboutus__inputs {
@@ -258,35 +258,36 @@ main {
     padding-left:4px;
 }
 
-/* Small devices, landscape */
-@media only screen and (min-width:576) {
-    .main__image__tablet {
-        display:none;
-    }
+/* Media Queries */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 
-    .main__image__desktop {
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: @screen-sm-min) {
+    .main__image > .small {
         display:none;
     }
-}
+    
+    .main__image > .medium {
+        display:block !important;
+    }
+    
+    .main__image > .large {
+        display:none;
+    }
+ }
 
-/* Mediam devices ie tablets */
-@media only screen and (min-width:768) {
-    .main__image__phone {
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: @screen-md-min) { 
+    .main__image > .small {
         display:none;
     }
-
-    .main__image__desktop {
+    
+    .main__image > .medium {
         display:none;
     }
-}
-
-/* Large devices ie desktop */
-@media only screen and (min-width:992) {
-    .main__image__phone {
-        display:none;
+    
+    .main__image > .large {
+        display:block !important;
     }
-
-    .main__image__tablet {
-        display:none;
-    }
-}
+ }
