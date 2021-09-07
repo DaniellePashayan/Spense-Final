@@ -420,6 +420,10 @@ button {
         display:block !important;
     }
 
+    #navigation > #links {
+        visibility:visible;
+     }
+
     #menu_options {
         display:inline;
     }
