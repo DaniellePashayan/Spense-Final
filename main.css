@@ -404,6 +404,15 @@ button {
     #menu_options {
         display:inline;
     }
+
+    .footer {
+        grid-template: repeat(2,1fr) / repeat(4,1fr);
+        background-color:#000;
+        grid-template-areas: 
+            "closer closer sitemap resources"
+            "company opportunities nothing nothing"
+        ;
+    }
 }
 
 /*large*/
@@ -426,6 +435,14 @@ button {
 
     #menu_options {
         display:inline;
+    }
+
+    .footer {
+        grid-template: 2 fr repeat(4,1fr) / 1fr;
+        background-color:#000;
+        grid-template-areas: 
+            "closer closer sitemap resources company opportunities"
+        ;
     }
 }
 
